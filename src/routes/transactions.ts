@@ -6,6 +6,18 @@ import { checkSessionIdExists } from '../middleware/checkSessionIdExists'
 
 // Cookies <--> Formas de manter contexto entre requisições
 
+//  tipos de Teste
+
+// unitários: unidade da sua aplicação
+// integração:  Comunicação entre duas ou mais unidades
+// e2e - ponta a ponta: simulam um usuário operando na nossa aplicação
+
+//  front-end: abre a página de login, digite o texto diego@rocketseat.com.br no campo com ID email, clique no botão
+//  back-end: chamadas http, websockets
+
+// Pirâmide de testes: E2E (não dependem de nenhuma tecnologia, não dependem de arquitetura)
+// 2000 testes --> Testes E2E => 16 min
+
 export async function transactionsRoutes(app: FastifyInstance) {
   app.get(
     '/',
